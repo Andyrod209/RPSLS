@@ -8,7 +8,7 @@ class Human(Player):
 
     def gesture_options(self):
         print(self.attack_list)
-        user_choice = input('select which attack you want to use: ')
+        user_choice = int(input('select which attack you want to use: '))
         if user_choice == 1:
             self.user_attack = self.attack_list[0]
         elif user_choice == 2:
@@ -21,5 +21,6 @@ class Human(Player):
             self.user_attack = self.attack_list[4]
         else:
             print('invalid input')
+        print(self.user_attack)
 
 
