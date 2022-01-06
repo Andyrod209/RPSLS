@@ -8,5 +8,5 @@ class Ai(Player):
     
     def random_gesture_choice(self):
         self.ai_option = self.attack_list[random.randint(0, 4)]
-        print(f'the ai has chose {self.ai_option} as its attack')
+        print(f'the ai has chosen {self.ai_option} as its attack')
         
