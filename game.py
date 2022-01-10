@@ -6,7 +6,7 @@ from ai import Ai
 
 class Game:
     def __init__(self):
-        self.player_one = Human() #player 1
+        self.player_one = None #player 1
         self.player_two = None #player2 = none
     
 
@@ -32,14 +32,20 @@ class Game:
         print('')
         invalid = True
         while invalid is True:
-            game_choice = input('What game would you like to play? Press 1 to play vs Ai or Press 2 to play multiplayer: ')
+            game_choice = input('What game would you like to play? Press 1 to play vs Sheldon or Press 2 to play multiplayer or press 3 to watch Sheldon vs Sheldon: ')
             print('')
             if game_choice == '1':
+                self.player_one = Human()
                 self.player_two = Ai()
                 invalid = False
             elif game_choice == '2':
+                self.player_one = Human()
                 self.player_two = Human()
                 invalid = False
+            elif game_choice == '3':
+                self.player_one = Ai()
+                self.player_two = Ai()
+                invalid = False 
             else:
                 print("Invalid input")
 

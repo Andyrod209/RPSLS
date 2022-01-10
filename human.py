@@ -10,7 +10,7 @@ class Human(Player):
     def gesture_options(self):
         invalid = True
         while invalid is True:
-            user_choice = int(input('''Select which attack you want to use:
+            user_choice = (input('''Select which attack you want to use:
 - 1. Rock
 - 2. Paper
 - 3. Scissors
@@ -19,23 +19,23 @@ class Human(Player):
 Entered number: '''))
             print('')
 
-            if user_choice == 1:
+            if user_choice == '1':
                 self.user_attack = self.attack_list[0]
                 print(self.user_attack)
                 invalid = False
-            elif user_choice == 2:
+            elif user_choice == '2':
                 self.user_attack = self.attack_list[1]
                 print(self.user_attack)
                 invalid = False
-            elif user_choice == 3:
+            elif user_choice == '3':
                 self.user_attack = self.attack_list[2]
                 print(self.user_attack)
                 invalid = False
-            elif user_choice == 4:
+            elif user_choice == '4':
                 self.user_attack = self.attack_list[3]
                 print(self.user_attack)
                 invalid = False
-            elif user_choice == 5:
+            elif user_choice == '5':
                 self.user_attack = self.attack_list[4]
                 print(self.user_attack)
                 invalid = False
