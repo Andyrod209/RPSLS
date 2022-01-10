@@ -4,8 +4,7 @@ from ai import Ai
 from human import Human
 from game import Game
 game = Game()
-game.rules()
-game.game_logic()
+game.round()
 
 # player = Player()
 # ai = Ai()

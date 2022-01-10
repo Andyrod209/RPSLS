@@ -31,12 +31,48 @@ class Game:
         pass
 
     def round(self):
+        self.human.gesture_options()
+        self.ai.random_gesture_choice()
+        self.game_logic(self.human.user_attack, self.ai.ai_option)
         pass
 
-    def game_logic(self):
-        self.human.gesture_options()
-        self.ai.random_gesture_choice() 
-        if self.human.user_attack == 'Rock':
+    def game_logic(self, player, opponent):
+        self.opponent = opponent
+        self.player = player
+        if (self.player == 'Rock' and self.opponent == 'Scissors') or \
+            (self.player == "Lizard" and self.opponent == "Spock") or \
+            (self.player == "Paper" and self.opponent == "Rock") or \
+            (self.player == "Paper" and self.opponent == "Spock") or \
+            (self.player == "Rock" and self.opponent == "Lizard") or \
+            (self.player == "Spock" and self.opponent == "Scissors") or \
+            (self.player == "Spock" and self.opponent == "Rock") or \
+            (self.player == "Scissors" and self.opponent == "Paper") or \
+            (self.player == "Lizard" and self.opponent == "Paper") or \
+            (self.player == "Scissors" and self.opponent == "Lizard"):
+            print("You win!")
+        if (self.opponent == 'Rock' and self.player == 'Scissors') or \
+            (self.opponent == "Lizard" and self.player == "Spock") or \
+            (self.opponent == "Paper" and self.player == "Rock") or \
+            (self.opponent == "Paper" and self.player == "Spock") or \
+            (self.opponent == "Rock" and self.player == "Lizard") or \
+            (self.opponent == "Spock" and self.player == "Scissors") or \
+            (self.opponent == "Spock" and self.player == "Rock") or \
+            (self.opponent == "Scissors" and self.player == "Paper") or \
+            (self.opponent == "Lizard" and self.player == "Paper") or \
+            (self.opponent == "Scissors" and self.player == "Lizard"):
+            print('better luck next time')
+        if self.player == opponent:
+            print('Tie!')
+        
+
+   
+
+    
+    def display_winner(self):
+        pass
+
+
+''' if self.human.user_attack == 'Rock':
             if self.ai.ai_option == "Scissors":
                 self.human.score += 1
                 print(f'winner of this round {self.human.name}')
@@ -117,8 +153,4 @@ class Game:
                 print(f'winner of this round {self.ai.name}')
             elif self.ai.ai_option == "Scissors":
                 print("It's a tie!")
-            
-
-    
-    def display_winner(self):
-        pass
+                '''
