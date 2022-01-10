@@ -4,13 +4,21 @@ from player import Player
 class Human(Player):
     def __init__(self):
         self.name = input("What's your name? ")
+        print('')
         super().__init__()
 
     def gesture_options(self):
         invalid = True
         while invalid is True:
-            print(self.attack_list)
-            user_choice = int(input('select which attack you want to use: '))
+            user_choice = int(input('''Select which attack you want to use:
+- 1. Rock
+- 2. Paper
+- 3. Scissors
+- 4. Lizard
+- 5. Spock
+Entered number: '''))
+            print('')
+
             if user_choice == 1:
                 self.user_attack = self.attack_list[0]
                 print(self.user_attack)
@@ -34,5 +42,3 @@ class Human(Player):
             else:
                 print('invalid input')
             
-
-

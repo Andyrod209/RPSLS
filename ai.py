@@ -8,5 +8,6 @@ class Ai(Player):
     
     def gesture_options(self):
         self.user_attack = self.attack_list[random.randint(0, 4)]
-        print(f'the ai has chosen {self.user_attack} as its attack')
-        
+        print('')
+        print(f'{self.name} has chosen {self.user_attack} as its attack')
+        print('')
