@@ -91,85 +91,85 @@ class Game:
         pass
 
 
-''' if self.human.user_attack == 'Rock':
-            if self.ai.ai_option == "Scissors":
-                self.human.score += 1
-                print(f'winner of this round {self.human.name}')
-            elif self.ai.ai_option == "Lizard":
-                self.human.score += 1
-                print(f'winner of this round {self.human.name}')
-            elif self.ai.ai_option == "Spock":
-                self.ai.score += 1
-                print(f'winner of this round {self.ai.name}')
-            elif self.ai.ai_option == "paper":
-                self.ai.score += 1
-                print(f'winner of this round {self.ai.name}')
-            elif self.ai.ai_option == "Rock":
-                print("It's a tie!")
+# ''' if self.human.user_attack == 'Rock':
+#             if self.ai.ai_option == "Scissors":
+#                 self.human.score += 1
+#                 print(f'winner of this round {self.human.name}')
+#             elif self.ai.ai_option == "Lizard":
+#                 self.human.score += 1
+#                 print(f'winner of this round {self.human.name}')
+#             elif self.ai.ai_option == "Spock":
+#                 self.ai.score += 1
+#                 print(f'winner of this round {self.ai.name}')
+#             elif self.ai.ai_option == "paper":
+#                 self.ai.score += 1
+#                 print(f'winner of this round {self.ai.name}')
+#             elif self.ai.ai_option == "Rock":
+#                 print("It's a tie!")
             
 
-        elif self.human.user_attack == "Scissors":
-            if self.ai.ai_option == "Paper":
-                self.human.score += 1
-                print(f'winner of this round {self.human.name}')
-            elif self.ai.ai_option == "Lizard":
-                self.human.score += 1
-                print(f'winner of this round {self.human.name}')
-            elif self.ai.ai_option == "Rock":
-                self.ai.score += 1
-                print(f'winner of this round {self.ai.name}')
-            elif self.ai.ai_option == "Spock":
-                self.ai.score += 1
-                print(f'winner of this round {self.ai.name}')
-            elif self.ai.ai_option == "Scissors":
-                print("It's a tie!")
-            print(f'winner of this round {self.human.name}') 
+#         elif self.human.user_attack == "Scissors":
+#             if self.ai.ai_option == "Paper":
+#                 self.human.score += 1
+#                 print(f'winner of this round {self.human.name}')
+#             elif self.ai.ai_option == "Lizard":
+#                 self.human.score += 1
+#                 print(f'winner of this round {self.human.name}')
+#             elif self.ai.ai_option == "Rock":
+#                 self.ai.score += 1
+#                 print(f'winner of this round {self.ai.name}')
+#             elif self.ai.ai_option == "Spock":
+#                 self.ai.score += 1
+#                 print(f'winner of this round {self.ai.name}')
+#             elif self.ai.ai_option == "Scissors":
+#                 print("It's a tie!")
+#             print(f'winner of this round {self.human.name}') 
 
-        elif self.human.user_attack == "paper":
-            if self.ai.ai_option == "Rock":
-                self.human.score += 1
-                print(f'winner of this round {self.human.name}')
-            elif self.ai.ai_option == "Spock":
-                self.human.score += 1
-                print(f'winner of this round {self.human.name}')
-            elif self.ai.ai_option == "Lizard":
-                self.ai.score += 1
-                print(f'winner of this round {self.ai.name}')
-            elif self.ai.ai_option == "Scissors":
-                self.ai.score += 1
-                print(f'winner of this round {self.ai.name}')
-            elif self.ai.ai_option == "paper":
-                print("It's a tie!")    
+#         elif self.human.user_attack == "paper":
+#             if self.ai.ai_option == "Rock":
+#                 self.human.score += 1
+#                 print(f'winner of this round {self.human.name}')
+#             elif self.ai.ai_option == "Spock":
+#                 self.human.score += 1
+#                 print(f'winner of this round {self.human.name}')
+#             elif self.ai.ai_option == "Lizard":
+#                 self.ai.score += 1
+#                 print(f'winner of this round {self.ai.name}')
+#             elif self.ai.ai_option == "Scissors":
+#                 self.ai.score += 1
+#                 print(f'winner of this round {self.ai.name}')
+#             elif self.ai.ai_option == "paper":
+#                 print("It's a tie!")    
          
-        elif self.human.user_attack == "Lizard":
-            if self.ai.ai_option == "Paper":
-                self.human.score += 1
-                print(f'winner of this round {self.human.name}')
-            elif self.ai.ai_option == "Spock":
-                self.human.score += 1
-                print(f'winner of this round {self.human.name}')
-            elif self.ai.ai_option == "Rock":
-                self.ai.score += 1
-                print(f'winner of this round {self.ai.name}')
-            elif self.ai.ai_option == "Scissors":
-                self.ai.score += 1
-                print(f'winner of this round {self.ai.name}')
-            elif self.ai.ai_option == "Lizard":
-                print("It's a tie!")
+#         elif self.human.user_attack == "Lizard":
+#             if self.ai.ai_option == "Paper":
+#                 self.human.score += 1
+#                 print(f'winner of this round {self.human.name}')
+#             elif self.ai.ai_option == "Spock":
+#                 self.human.score += 1
+#                 print(f'winner of this round {self.human.name}')
+#             elif self.ai.ai_option == "Rock":
+#                 self.ai.score += 1
+#                 print(f'winner of this round {self.ai.name}')
+#             elif self.ai.ai_option == "Scissors":
+#                 self.ai.score += 1
+#                 print(f'winner of this round {self.ai.name}')
+#             elif self.ai.ai_option == "Lizard":
+#                 print("It's a tie!")
         
-        elif self.human.user_attack == "Spock":
-            if self.ai.ai_option == "Scissors":
-                self.human.score += 1
-                print(f'winner of this round {self.human.name}')
-            elif self.ai.ai_option == "Rock":
-                self.human.score += 1
-                print(f'winner of this round {self.human.name}')
-            elif self.ai.ai_option == "Paper":
-                self.ai.score += 1
-                print(f'winner of this round {self.ai.name}')
-            elif self.ai.ai_option == "Spock":
-                self.ai.score += 1
-                print(f'winner of this round {self.ai.name}')
-            elif self.ai.ai_option == "Scissors":
-                print("It's a tie!")
-                '''
+#         elif self.human.user_attack == "Spock":
+#             if self.ai.ai_option == "Scissors":
+#                 self.human.score += 1
+#                 print(f'winner of this round {self.human.name}')
+#             elif self.ai.ai_option == "Rock":
+#                 self.human.score += 1
+#                 print(f'winner of this round {self.human.name}')
+#             elif self.ai.ai_option == "Paper":
+#                 self.ai.score += 1
+#                 print(f'winner of this round {self.ai.name}')
+#             elif self.ai.ai_option == "Spock":
+#                 self.ai.score += 1
+#                 print(f'winner of this round {self.ai.name}')
+#             elif self.ai.ai_option == "Scissors":
+#                 print("It's a tie!")
+#                 '''
