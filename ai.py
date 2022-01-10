@@ -6,7 +6,7 @@ class Ai(Player):
         self.name = "Sheldon"
         super().__init__() 
     
-    def random_gesture_choice(self):
-        self.ai_option = self.attack_list[random.randint(0, 4)]
-        print(f'the ai has chosen {self.ai_option} as its attack')
+    def gesture_options(self):
+        self.user_attack = self.attack_list[random.randint(0, 4)]
+        print(f'the ai has chosen {self.user_attack} as its attack')
         
