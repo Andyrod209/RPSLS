@@ -23,47 +23,66 @@ class Game:
         lizard eats paper
         paper disproves spock
         spock vaporizes rock''')
-    
+    # selecting player vs ai or PVP
     def game_type(self):
         pass
 
-    def battle(self):
+
+    def Battle(self):
+        # self.human.gesture_options()
+        # self.ai.random_gesture_choice()
+        self.game_logic()
+        while self.human.score <= 2 or self.ai.score <= 2:
+            self.game_logic()
+            if self.human.score == 2:
+                print('')
+                print(f'{self.human.name} has won the game!!!')
+                break
+            elif self.ai.score == 2:
+                print('')
+                print(f'{self.ai.name} has won the game!!!')
+                break
+           
+                
+
+        
         pass
 
-    def round(self):
+    def game_logic(self):
+        # doesn't make sense but refortor later...
         self.human.gesture_options()
         self.ai.random_gesture_choice()
-        self.game_logic(self.human.user_attack, self.ai.ai_option)
-        pass
-
-    def game_logic(self, player, opponent):
-        self.opponent = opponent
-        self.player = player
-        if (self.player == 'Rock' and self.opponent == 'Scissors') or \
-            (self.player == "Lizard" and self.opponent == "Spock") or \
-            (self.player == "Paper" and self.opponent == "Rock") or \
-            (self.player == "Paper" and self.opponent == "Spock") or \
-            (self.player == "Rock" and self.opponent == "Lizard") or \
-            (self.player == "Spock" and self.opponent == "Scissors") or \
-            (self.player == "Spock" and self.opponent == "Rock") or \
-            (self.player == "Scissors" and self.opponent == "Paper") or \
-            (self.player == "Lizard" and self.opponent == "Paper") or \
-            (self.player == "Scissors" and self.opponent == "Lizard"):
+        # self.opponent = opponent
+        # self.player = player
+        if (self.human.user_attack == 'Rock' and self.ai.ai_option == 'Scissors') or \
+            (self.human.user_attack == "Lizard" and self.ai.ai_option == "Spock") or \
+            (self.human.user_attack == "Paper" and self.ai.ai_option == "Rock") or \
+            (self.human.user_attack == "Paper" and self.ai.ai_option == "Spock") or \
+            (self.human.user_attack == "Rock" and self.ai.ai_option == "Lizard") or \
+            (self.human.user_attack == "Spock" and self.ai.ai_option == "Scissors") or \
+            (self.human.user_attack == "Spock" and self.ai.ai_option == "Rock") or \
+            (self.human.user_attack == "Scissors" and self.ai.ai_option == "Paper") or \
+            (self.human.user_attack == "Lizard" and self.ai.ai_option == "Paper") or \
+            (self.human.user_attack == "Scissors" and self.ai.ai_option == "Lizard"):
             print("You win!")
-        if (self.opponent == 'Rock' and self.player == 'Scissors') or \
-            (self.opponent == "Lizard" and self.player == "Spock") or \
-            (self.opponent == "Paper" and self.player == "Rock") or \
-            (self.opponent == "Paper" and self.player == "Spock") or \
-            (self.opponent == "Rock" and self.player == "Lizard") or \
-            (self.opponent == "Spock" and self.player == "Scissors") or \
-            (self.opponent == "Spock" and self.player == "Rock") or \
-            (self.opponent == "Scissors" and self.player == "Paper") or \
-            (self.opponent == "Lizard" and self.player == "Paper") or \
-            (self.opponent == "Scissors" and self.player == "Lizard"):
+            self.human.score += 1
+            
+        if (self.ai.ai_option == 'Rock' and self.human.user_attack == 'Scissors') or \
+            (self.ai.ai_option == "Lizard" and self.human.user_attack == "Spock") or \
+            (self.ai.ai_option == "Paper" and self.human.user_attack == "Rock") or \
+            (self.ai.ai_option == "Paper" and self.human.user_attack == "Spock") or \
+            (self.ai.ai_option == "Rock" and self.human.user_attack == "Lizard") or \
+            (self.ai.ai_option == "Spock" and self.human.user_attack == "Scissors") or \
+            (self.ai.ai_option == "Spock" and self.human.user_attack == "Rock") or \
+            (self.ai.ai_option == "Scissors" and self.human.user_attack == "Paper") or \
+            (self.ai.ai_option == "Lizard" and self.human.user_attack == "Paper") or \
+            (self.ai.ai_option == "Scissors" and self.human.user_attack == "Lizard"):
             print('better luck next time')
-        if self.player == opponent:
+            self.ai.score += 1
+            
+        if self.human.user_attack == self.ai.ai_option:
             print('Tie!')
-        
+        print(f"Scores are {self.human.name}:{self.human.score} {self.ai.name}:{self.ai.score}")
 
    
 
